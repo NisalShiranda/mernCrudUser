@@ -1,8 +1,43 @@
 .box{
   width: 500px;
   height: 500px;
-  display: flex;
+  
+  
   
   margin:  50px auto;
   background-color: #f0f0f0;
+}
+
+.btn{
+  padding:5px 10px;
+  border-radius:10px;
+  color: white;
+  cursor: pointer;
+  
+  
+}
+
+.form-container{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  
+
+}
+
+.submit-btn{
+  background-color: #4CAF50;
+  cursor:pointer;
+  color: white;
+  font-weight: bold;
+}
+
+.close-btn{
+  background-color: #f44336;
+  cursor:pointer;
+  color: white;
+  font-weight: bold;
 }
