@@ -39,6 +39,10 @@ function App() {
      const data = await axios.post('/create',formData);
 
      console.log(data);
+     if(data.data.success) {
+        setAddSection(false);
+        alert(data.data.message);
+      }
     
   };
   return (
