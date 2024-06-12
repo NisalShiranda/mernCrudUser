@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -17,6 +17,8 @@ function App() {
     mobile: "",
   
   });
+
+  const [dataList,setDataList] = useState([]);
 
 
 
@@ -45,6 +47,29 @@ function App() {
       }
     
   };
+
+    const getFetchdata = async() =>{
+
+      const data = await axios.post('/');
+      console.log(data)
+
+        
+        if(data.data.success) {
+          setDataList(data.data.data)
+        
+        alert(data.data.message);
+        
+      }
+
+    };
+
+    useEffect(() => {
+      getFetchdata();
+    });
+
+    console.log(dataList);
+
+
   return (
     <>
       <div className="box">
